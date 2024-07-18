@@ -1,0 +1,38 @@
+### The following query using CTE retrieves top 5 customer locations with high valued customers of Rockbuster Stealth.
+
+WITH country_info_CTE(country) AS -- Uses CTE to retrieve country info
+(
+	SELECT D.country FROM customer A
+    INNER JOIN address B ON A.address_id = B.address_id
+    INNER JOIN city C ON B.city_id = C.city_id
+    INNER JOIN country D ON C.country_id = D.country_id
+    GROUP BY D.country
+	ORDER BY COUNT(A.customer_id) 
+	DESC LIMIT 10
+),
+city_info_CTE(city) AS -- Uses CTE to retrieve city info
+(
+	SELECT C.city FROM customer A
+    INNER JOIN address B ON A.address_id = B.address_id
+    INNER JOIN city C ON B.city_id = C.city_id
+    INNER JOIN country D ON C.country_id = D.country_id
+    WHERE D.country IN 
+		(SELECT * from country_info_CTE)
+	GROUP BY C.city, D.country
+    ORDER BY COUNT(A.customer_id) 
+	DESC LIMIT 10
+)
+
+-- Main Query
+SELECT
+	A.customer_id,A.first_name,A.last_name,D.country,C.city,
+	SUM(P.amount) AS Total_Amount FROM payment P
+INNER JOIN customer A ON P.customer_id = A.customer_id
+INNER JOIN address B ON A.address_id = B.address_id
+INNER JOIN city C ON B.city_id = C.city_id
+INNER JOIN country D ON C.country_id = D.country_id
+WHERE C.city IN 
+	(SELECT * from city_info_CTE)
+GROUP BY A.customer_id, A.first_name, A.last_name,C.city, D.country
+ORDER BY Total_Amount 
+DESC LIMIT 5
