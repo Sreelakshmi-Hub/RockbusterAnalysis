@@ -1,4 +1,4 @@
-### The following query using CTE retrieves top 5 customer locations with high valued customers of Rockbuster Stealth.
+## The following query using CTE retrieves top 5 customer locations with high valued customers of Rockbuster Stealth.
 
 WITH country_info_CTE(country) AS -- Uses CTE to retrieve country info
 (
