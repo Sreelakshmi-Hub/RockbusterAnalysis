@@ -3,7 +3,7 @@ Exploring Rockbuster Stealth's data to help its Business Intelligence department
 # Rockbuster Stealth Data Analysis Project
 **Introduction**: Rockbuster Stealth LLC, a traditional movie rental company facing competition from streaming giants. My role as a Data Analyst is to help the Business Intelligence department with the launch strategy for their new online video service. Utilizing SQL, I will analyze various data points and answer ad-hoc business questions that they can use for their 2020 company strategy.
 
-## Key Questions:
+**Key Questions**:
 -	Which movies contributed the most/least to revenue gain?
 -	What was the average rental duration for all videos?
 -	Which countries are Rockbuster customers based in?
