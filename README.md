@@ -1,7 +1,7 @@
 # RockbusterAnalysis
 Exploring Rockbuster Stealth's data to help its Business Intelligence department with the launch strategy for their new online video service. Analysis entails leveraging SQL in identifying movies with most/least revenue gain, average rental durations and geographical locations with high-valued customers and comparing sales across various regions. 
-# Rockbuster Stealth Data Analysis Project ![Picture1](https://github.com/user-attachments/assets/a07e3db1-cf9b-412e-91ec-3b87758b9854)
-
+![Picture1](https://github.com/user-attachments/assets/a07e3db1-cf9b-412e-91ec-3b87758b9854)
+# Rockbuster Stealth Data Analysis Project
 
 **Introduction**: Rockbuster Stealth LLC, a traditional movie rental company facing competition from streaming giants. My role as a Data Analyst is to help the Business Intelligence department with the launch strategy for their new online video service. Utilizing SQL, I will analyze various data points and answer ad-hoc business questions that they can use for their 2020 company strategy.
 
@@ -19,5 +19,8 @@ The dataset includes information on Rockbuster’s film inventory, customers, an
 
 ## Project Deliverables:
 The project culminates in a comprehensive analysis, backed by SQL queries, visualizations, and a narrative that translates complex data into actionable business insights.
+
 **Visualizations**: Check out the [Tableau Public Dashboard](https://public.tableau.com/app/profile/sreelakshmi.sreekala.devi/viz/Task3_10_Rockbuster_presentation/Rockbuster_Visualizations?publish=yes) for interactive insights.
+
 **Project Report**: Find a detailed report in the [Final Project Presentation](https://github.com/Sreelakshmi-Hub/RockbusterAnalysis/blob/main/Rockbuster_Project_Presentation.pdf).
+
